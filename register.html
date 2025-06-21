@@ -1,114 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register for Live Blogging Webinar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="register.css" />
 </head>
 <body>
-    <div class="register-page">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="register-card animate-card-entrance">
-                        <div class="text-center mb-4">
-                            <h2 class="register-title">🔥 Register for Live Blogging Webinar</h2>
-                            <p class="register-subtitle">Learn How to Make ₹30,000/Month Through Blogging</p>
-                        </div>
-                        
-                        <form id="registrationForm">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Full Name *</label>
-                                <input type="text" class="form-control animate-input-focus" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="age" class="form-label">Age *</label>
-                                <input type="number" class="form-control animate-input-focus" id="age" name="age" min="16" max="100" required>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number *</label>
-                                <input type="tel" class="form-control animate-input-focus" id="phone" name="phone" pattern="[0-9]{10}" required>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" class="form-control animate-input-focus" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="pricing-info text-center mb-4 animate-price-highlight">
-                                <div class="course-price">
-                                    <span class="offer-text">🎁 Get ₹2,100 Worth Bonuses Free!</span>
-                                </div>
-                                <div class="course-price mt-2">
-                                    <span class="offer-text">Entry Fee: </span>
-                                    <span class="original-price">₹499</span>
-                                    <span class="discounted-price">₹21</span>
-                                </div>
-                                <p class="offer-details">Limited Time Offer - 95% OFF!</p>
-                            </div>
-                            
-                            <div class="webinar-info mb-4 animate-info-box">
-                                <h6>📅 Webinar Details:</h6>
-                                <p class="mb-1"><strong>Date:</strong> 22nd June (Sunday)</p>
-                                <p class="mb-1"><strong>Time:</strong> 3:00 PM onwards</p>
-                                <p class="mb-1"><strong>Platform:</strong> Zoom</p>
-                                <p class="mb-0"><strong>Duration:</strong> 90 Minutes</p>
-                            </div>
-                            
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn-pay animate-button-press" id="payButton">
-                                    💳 Pay ₹21 & Secure Your Spot
-                                </button>
-                            </div>
-                            
-                            <div class="text-center mt-3">
-                                <a href="index.html" class="back-link">← Back to Webinar Details</a>
-                            </div>
-                        </form>
-                        
-                        <div class="guarantee-section mt-4 animate-guarantee">
-                            <div class="text-center">
-                                <p class="guarantee-text">
-                                    <strong>💯 100% Money Back Guarantee</strong><br>
-                                    If you're not satisfied, get your money back within 7 days.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content animate-modal-entrance">
-                <div class="modal-header">
-                    <h5 class="modal-title">🎉 Registration Successful!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body text-center">
-                    <p>Thank you for registering for the Live Blogging Webinar!</p>
-                    <p><strong>📋 Webinar Details:</strong></p>
-                    <p>📅 Date: 22nd June (Sunday)<br>
-                    ⏰ Time: 3:00 PM onwards<br>
-                    💻 Platform: Zoom<br>
-                    🎁 Bonuses: ₹2,100 Worth Free</p>
-                    <p>You will receive the Zoom link via email shortly.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
-                </div>
-            </div>
-        </div>
-    </div>
+  <!-- Background Section -->
+  <section class="registration-bg py-5 position-relative">
+    <h1 class="registration-heading text-center text-uppercase">
+    YOU ARE JUST ONE STEP AWAY FROM REGISTRATION
+  </h1>
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- Card -->
+        <div class="col-lg-10 col-md-12">
+          <div class="registration-card shadow p-4 rounded-4 bg-white">
+            <div class="row align-items-center">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+              <!-- Left Image + Bonus Info -->
+<div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+  <img src="assets/images/oggyr.jpg" alt="Amresh Bharati" class="img-fluid rounded-3 mb-3" />
+  <h4 class="fw-bold">Mr. Oggy</h4>
+  <p class="text-muted small">aka Mahatmaji Technical</p>
+
+  <!-- Webinar Text -->
+  <h3 class="fs-5 fw-bold text-dark mt-4">
+    Attend The Webinar & Get ₹2100 Bonus – Instantly!
+  </h3>
+
+  <!-- Bonus Box -->
+  <div class="bg-light p-4 rounded mt-3">
+    <h5 class="fw-semibold mb-3">Bonuses Worth ₹2100</h5>
+    <ul class="ps-3">
+      <li>Top 10 AI Tools for Content Creator</li>
+      <li>Viral Content Script packs (Hook's + CTAs)</li>
+      <li>100% SEO Video Uploading Checklist</li>
+    </ul>
+  </div>
+</div>
+
+
+              <!-- Right Form -->
+              <div class="col-md-5 -mt-4">
+                <h2 class="text-center fw-bold mb-3">Register Now</h2>
+                
+
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" class="form-control" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">WhatsApp Number *</label>
+                    <input type="tel" class="form-control" required />
+                  </div>
+                 <!-- Order Summary -->
+<div class="order-summary-box mb-4">
+  <h3 class="order-title">Your Order</h3>
+  <table class="order-table w-100">
+    <thead>
+      <tr>
+        <th class="text-start py-2">Product</th>
+        <th class="text-end py-2">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="py-2">Crack your Next Viral Video × 1</td>
+        <td class="py-2 text-end">₹21.00</td>
+      </tr>
+      <tr>
+        <td class="py-2">Subtotal</td>
+        <td class="py-2 text-end">₹21.00</td>
+      </tr>
+      <tr>
+        <td class="py-2 fw-bold">Total</td>
+        <td class="py-2 text-end fw-bold">₹21.00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Razorpay Info -->
+<div class="rzpay-box mb-4 p-3 rounded">
+  <h3 class="d-flex align-items-center mb-3">
+    <img src="assets/images/rzpay.svg" alt="Razorpay" width="60" class="me-2" />
+    Pay by Razorpay
+  </h3>
+  <div class="rzpay-warning p-3 mb-3">
+    <p class="mb-0 small text-danger">
+      Pay securely by UPI or Credit or Debit card or Internet Banking through Razorpay.
+    </p>
+  </div>
+  <p class="small text-muted mb-0">
+    Your personal data will be used to process your codes, support your experience throughout this website, and for other purposes described in our privacy policy.
+  </p>
+</div>
+
+<div class="button-container">
+    <button class="register-btn">
+      <i class="fas fa-lock"></i> Register Now
+    </button>
+  </div>
+
+                  
+                </form>
+
+              </div> <!-- Right Form End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function redirectToPayment() {
+      window.location.href = "https://your-payment-page.com"; // Replace with actual Razorpay redirect
+    }
+  </script>
+
 </body>
 </html>

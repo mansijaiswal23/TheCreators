@@ -1,0 +1,131 @@
+/* Top Heading */
+
+
+.top-heading h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #0b3a74;
+}
+
+@media (min-width: 768px) {
+  .top-heading h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Section Background */
+.registration-bg {
+  background-color: #fdf7ec;
+}
+
+/* Card */
+.registration-card {
+  background: white;
+  border-radius: 20px;
+}
+
+/* Image Styling */
+.registration-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* List Style */
+.registration-card ul {
+  padding-left: 20px;
+}
+/* Order Summary Table */
+.order-summary-box {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px dashed #ccc;
+}
+
+.order-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.order-table th,
+.order-table td {
+  border-bottom: 1px dashed #ccc;
+  padding: 10px 0;
+}
+
+.order-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Razorpay Box */
+.rzpay-box {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.rzpay-warning {
+  background-color: #ffecec;
+  border-left: 4px solid red;
+  border-radius: 6px;
+}
+
+.register-btn {
+  background: #000000; /* Pure black */
+  color: white;
+  padding: 14px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.register-btn:hover {
+  background: orange;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4);
+}
+
+
+.registration-heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0B1D51;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px 32px;
+  border-radius: 12px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: slideFadeIn 1.2s ease-out forwards;
+}
+
+/* Animation */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Responsive size */
+@media (min-width: 768px) {
+  .registration-heading {
+    font-size: 32px;
+  }
+}
