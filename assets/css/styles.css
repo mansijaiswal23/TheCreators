@@ -539,8 +539,8 @@ body {
 
 
 .section-title {
-  font-size: clamp(1.2rem, 4vw, 2.8rem);  /* Scales down on small screens */
-  font-weight: 800;
+font-size: clamp(1rem, 3vw, 2.2rem);
+  font-weight: 600;
   color: #1e3a8a;
   text-transform: uppercase;
   letter-spacing: -0.5px;
@@ -1490,8 +1490,6 @@ body {
 }
 
 
-
-
 .speaker-info h2 {
   color: white;
   font-size: 1.5rem;
@@ -1503,7 +1501,7 @@ body {
 }
 
 .benefits-list {
-   
+   margin-top: 2rem;
   flex: 1;
   gap: 1rem;
 }
@@ -1519,6 +1517,34 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .benefits-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .speaker-card {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .benefits-list {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .benefit-card {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-card {
+    font-size: 0.85rem;
+  }
 }
 
 /* Challenges Section */
@@ -1609,7 +1635,6 @@ body {
 
 
 
-/* Achievement down */
 .footer-links {
   margin-top: 1rem;
   margin-bottom: 5rem;
@@ -1633,12 +1658,9 @@ body {
 }
 
 .footer-links {
-  font-size: clamp(0.6rem, 2vw, 1rem); /* Small on small screens, large on large */
-  white-space: nowrap;                /* Always stay in one line */
-  overflow-x: auto;                   /* Allow scroll if content overflows */
-  -webkit-overflow-scrolling: touch;  /* Smooth scroll on iOS */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
-
 
 
 .footer-links a {
