@@ -539,13 +539,18 @@ body {
 
 
 .section-title {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #1e3a8a;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin-bottom: 50px;
+  font-size: clamp(1.2rem, 4vw, 2.8rem);  /* Scales down on small screens */
+  font-weight: 800;
+  color: #1e3a8a;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+
+  text-align: center;  /* Looks better with wrapped headings */
+  line-height: 1.2;
 }
+
+
 
 
 .highlight-card {
@@ -652,34 +657,45 @@ body {
     font-weight: 600;
 }
 
+
 /* 🔧 Responsive fix for small screens */
 @media (max-width: 576px) {
-    .instructor-section .row {
-        flex-wrap: wrap; /* Allow wrapping */
-    }
+  .instructor-section .row {
+    flex-direction: column; /* 👈 Stack image above content */
+    align-items: center;    /* 👈 Center align on mobile */
+  }
 
-    .instructor-image,
-    .instructor-content {
-        flex: 1 1 100%; /* Full width on small screen */
-        max-width: 100%;
-    }
+  .instructor-image,
+  .instructor-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 
-    .instructor-content {
-        padding-left: 0;
-        margin-top: 15px;
-    }
+  .instructor-image {
+    display: flex;
+    justify-content: center;
+  }
 
-    .instructor-description {
-        font-size: 0.9rem;
-    }
+  .instructor-content {
+    padding-left: 0;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
 
-    .instructor-name {
-        font-size: 1.4rem;
-    }
+  .instructor-name {
+    font-size: 1.4rem;
+  }
 
-    .instructor-stats {
-        justify-content: space-around;
-    }
+  .instructor-description {
+    font-size: 0.9rem;
+  }
+
+  .instructor-stats {
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1rem;
+  }
 }
 
 /* Audience Section */
@@ -837,18 +853,49 @@ body {
 .faq-answer p {
   padding: 1rem 0;
 }
+/* Responsive typography */
+@media (max-width: 768px) {
+  .faq-heading {
+    font-size: 1.5rem;
+  }
 
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 2.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-heading {
+    font-size: 1.2rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+}
 .cta-section {
   margin-top: 2rem;
-  margin-bottom:-1rem;
+  margin-bottom: -1rem;
   text-align: center;
+
+  padding: 0 1rem; /* Add horizontal padding for small screens */
 }
 
 .cta-button {
-  background-color: #061B50;;
+  background-color: #061B50;
   color: white;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: clamp(0.6rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+  font-size: clamp(1rem, 4vw, 1.5rem);
   font-weight: bold;
   border: none;
   border-radius: 12px;
@@ -857,24 +904,25 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #061B50;;
+  background-color: #061B50;
 }
 
 .offer {
   margin-top: 1rem;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 3.5vw, 1.3rem); /* Responsive font size */
 }
 
 .strike {
-    color: red;
-   text-decoration: line-through;  /* strike */
+  color: red;
+  text-decoration: line-through;
   text-decoration-color: black;
 }
 
 .highlight {
-  color: #061B50;;
+  color: #061B50;
   font-weight: bold;
 }
+
 
 
 
@@ -1388,17 +1436,26 @@ body {
 .section-title {
   text-align: center;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
+  margin-top:-3rem;
+  padding-top: 1rem;
   margin-bottom: 3rem;
 }
 
 .section-title.orange {
   color: #f97316;
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Responsive font size */
+  font-weight: 800;                      /* Optional: strong title feel */
+  text-align: center;                    /* Optional: better on small screens */
+  line-height: 1.2;                      /* Optional: improves readability */
 }
+
 
 .section-title.dark {
   color: #1e3a8a;
   margin-top: -5rem;
+  font-size: clamp(1rem, 5vw, 2.5rem); /* Shrinks on small screens */
+  
 }
 
 /* Benefits Section */
@@ -1510,31 +1567,79 @@ body {
   color: #1e3a8a;
 }
 
+@media (max-width: 768px) {
+  .challenges-layout {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .thinking-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .challenges-list {
+    margin: 0 1rem;
+  }
+
+  .challenge-item {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .challenge-item {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .challenges-list {
+    margin: 0;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
 
 
 /* Achievement down */
 .footer-links {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   padding: 0.5rem 1rem;
-  
-   
-  background-color: yellow;
 
-  border-top: 1px solid #061B50;
-  background-color: #f3f4f6; /* fixed typo */
+  background-color: #f3f4f6;
   color: #555;
-  font-size: 0.6rem;
-  
+  font-size: clamp(0.6rem, 2.5vw, 0.9rem);
+
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  overflow-x: auto;
+
   white-space: nowrap;
-  text-align: center;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
 }
+
+.footer-links {
+  font-size: clamp(0.6rem, 2vw, 1rem); /* Small on small screens, large on large */
+  white-space: nowrap;                /* Always stay in one line */
+  overflow-x: auto;                   /* Allow scroll if content overflows */
+  -webkit-overflow-scrolling: touch;  /* Smooth scroll on iOS */
+}
+
+
 
 .footer-links a {
   color: #555;
