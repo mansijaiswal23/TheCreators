@@ -558,4 +558,29 @@ if ('performance' in window) {
             });
         }, 0);
     });
+
 }
+
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach((q) => {
+      q.addEventListener("click", () => {
+        const active = document.querySelector(".faq-question.active");
+        if (active && active !== q) {
+          active.classList.remove("active");
+          active.nextElementSibling.style.maxHeight = null;
+        }
+
+        q.classList.toggle("active");
+        const answer = q.nextElementSibling;
+        if (q.classList.contains("active")) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          q.textContent = q.textContent.replace('+', '−');
+        } else {
+          answer.style.maxHeight = null;
+          q.textContent = q.textContent.replace('−', '+');
+        }
+      });
+    });
+
+    // FAQ Section
+    
