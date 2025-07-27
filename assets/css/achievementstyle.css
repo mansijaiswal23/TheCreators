@@ -1,15 +1,13 @@
-
-
 /* Achievements Heading */
 .achievements-section2 h1 {
-  font-size: clamp(1.2rem, 4vw, 2.5rem); /* Responsive text size */
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   font-weight: bold;
-  /* padding: 60px 20px; */
-  margin-top: -37vw;
+  margin-top: -10vw;      /* 🔥 REMOVE -37vw */
   margin-bottom: 8px;
-  text-align: center; /* Optional: center-align for better appearance */
-  line-height: 1.2;   /* Optional: improve readability */
+  text-align: center;
+  line-height: 1.2;
 }
+
 
 
 /* Grid Layout */
@@ -19,9 +17,9 @@
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: -100px; /* ✅ Positive margin */
-  /* padding: -10px; */
+  margin-bottom: 3rem; /* ✅ use positive spacing */
 }
+
 
 /* Responsive Grid */
 @media (max-width: 900px) {
@@ -67,5 +65,3 @@
   margin-bottom:-20px;
   
 }
-
-

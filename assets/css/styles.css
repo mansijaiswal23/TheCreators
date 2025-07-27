@@ -1,22 +1,24 @@
 
 /* Reset and base styles */
 * {
-  margin: 0;
-  padding: 0;
+ 
   
-  /* box-sizing: border-box; */
+   box-sizing: border-box; 
 }
 
 
-body {
+html,body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom left, #f0f9ff, #dbeafe, #bfdbfe);
   color: #1e3a8a;
   padding: 2rem;
   text-align: center;
   line-height: 1.6;
-  
+  max-width: 100%;
+   margin: 0;
+  padding: 0;
   overflow-x: hidden;
+  
 }
 
 /* Animation Keyframes */
@@ -581,32 +583,19 @@ font-size: clamp(1rem, 3vw, 2.2rem);
 
 /* Instructor Section */
 .instructor-section {
-    /* background: white; */
     padding: 60px 0;
-    margin-top:-2rem;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    background: #f7faff;
 }
 
-/* Default layout for large screens */
-.instructor-section .row {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-}
-
-/* Force equal width */
-.instructor-section .col-lg-6 {
-    flex: 1 1 50%;
-    box-sizing: border-box;
-}
-
+/* Image styling */
 .instructor-image img {
-    width: 90%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     object-fit: cover;
     aspect-ratio: 1 / 1;
 }
@@ -615,88 +604,76 @@ font-size: clamp(1rem, 3vw, 2.2rem);
     transform: scale(1.05);
 }
 
+/* Content styling */
 .instructor-content {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .instructor-name {
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: 800;
     color: #2c3e50;
     margin-bottom: 15px;
 }
 
 .instructor-description {
-    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .instructor-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 25px;
+    margin-top: 1rem;
 }
 
 .stat-item {
     text-align: center;
-    min-width: 70px;
+    min-width: 80px;
 }
 
 .stat-number {
-    display: block;
-    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
     font-weight: 800;
     color: #FF6B35;
 }
 
 .stat-label {
-    font-size: clamp(0.75rem, 1vw, 0.85rem);
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
     color: #666;
     font-weight: 600;
 }
 
 
 /* 🔧 Responsive fix for small screens */
-@media (max-width: 576px) {
-  .instructor-section .row {
-    flex-direction: column; /* 👈 Stack image above content */
-    align-items: center;    /* 👈 Center align on mobile */
-  }
-
-  .instructor-image,
+@media (max-width: 768px) {
   .instructor-content {
-    flex: 1 1 100%;
-    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
   }
 
   .instructor-image {
     display: flex;
     justify-content: center;
-  }
-
-  .instructor-content {
-    padding-left: 0;
-    padding: 0 1rem;
-    margin-top: 1rem;
-    text-align: center;
-  }
-
-  .instructor-name {
-    font-size: 1.4rem;
-  }
-
-  .instructor-description {
-    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
   }
 
   .instructor-stats {
     justify-content: center;
-    gap: 20px;
-    margin-top: 1rem;
+  }
+
+  .instructor-name {
+    font-size: 1.6rem;
+  }
+
+  .instructor-description {
+    font-size: 1rem;
   }
 }
+
 
 /* Audience Section */
 .audience-section {
@@ -1239,12 +1216,12 @@ font-size: clamp(1rem, 3vw, 2.2rem);
   width: 100%;
 }
 
-
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 columns */
   gap: 1.5rem;
 }
+
 
 .achievement-card {
   background: linear-gradient(to bottom right, #9333ea, #2563eb);
@@ -1264,6 +1241,18 @@ font-size: clamp(1rem, 3vw, 2.2rem);
   justify-content: center;
   margin-bottom: 1rem;
 }
+@media (max-width: 1024px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 // Footer Banner
 .footer-banner::before {
@@ -1409,18 +1398,8 @@ font-size: clamp(1rem, 3vw, 2.2rem);
 .footer-links {
   margin-bottom: 90px; /* To avoid overlapping with fixed footer */
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f4f6;
-  color: #1e293b;
-  line-height: 1.6;
-}
+
 
 .container {
   max-width: 1200px;
@@ -1637,7 +1616,7 @@ body {
 
 .footer-links {
   margin-top: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   padding: 0.5rem 1rem;
 
   background-color: #f3f4f6;
